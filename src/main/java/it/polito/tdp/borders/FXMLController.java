@@ -4,6 +4,7 @@ package it.polito.tdp.borders;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import it.polito.tdp.borders.model.Country;
 import it.polito.tdp.borders.model.Model;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -28,6 +29,19 @@ public class FXMLController {
 
     @FXML
     void doCalcolaConfini(ActionEvent event) {
+    	txtResult.clear();
+    	
+    	String annoStringa = txtAnno.getText();
+    	int anno = Integer.parseInt(annoStringa);
+    	this.model.creaGrafo(anno);
+    	String vertici = "";
+    	for(Country c : model.getVertici()) {
+    		vertici = vertici + c.getStateName() + " " + model.getGrado(c) + "\n";
+    		
+    	}
+    	txtResult.appendText(vertici);
+    	
+    	
 
     }
 

@@ -6,7 +6,7 @@ public class TestModel {
 
 		Model model = new Model();
 
-		System.out.println("TestModel -- TODO");
+//		System.out.println("TestModel -- TODO");
 		
 //		System.out.println("Creo il grafo relativo al 2000");
 //		model.createGraph(2000);
@@ -20,6 +20,7 @@ public class TestModel {
 //		for (Country country : stats.keySet())
 //			System.out.format("%s %d\n", country, stats.get(country));		
 		
+		model.creaGrafo(2000);
 	}
 
 }
